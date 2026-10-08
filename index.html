@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Переговоры — план подготовки</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>На случай очень важных переговоров</h1>
+    <p>план подготовки: форма + список + гант</p>
+  </header>
+
+  <section class="card">
+    <h2>новый пункт</h2>
+    <form id="f" novalidate>
+      <div class="row">
+        <label>название<input id="title" placeholder="например: повестка"></label>
+        <label>ответственный<input id="owner" placeholder="кто ведет"></label>
+      </div>
+      <div class="row">
+        <label>старт<input id="start" type="date"></label>
+        <label>финиш<input id="end" type="date"></label>
+        <label>статус
+          <select id="status">
+            <option value="plan">план</option>
+            <option value="work">в работе</option>
+            <option value="done">готово</option>
+          </select>
+        </label>
+      </div>
+      <div id="err" class="err"></div>
+      <button type="submit">добавить</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>список</h2>
+    <div id="filters" class="filters">
+      <button data-f="all" class="on">все</button>
+      <button data-f="plan">план</button>
+      <button data-f="work">в работе</button>
+      <button data-f="done">готово</button>
+    </div>
+    <div id="list"></div>
+  </section>
+
+  <section class="card">
+    <h2>гант</h2>
+    <div id="gantt"></div>
+  </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
